@@ -1,2 +1,4 @@
-# yt-github-action
-YouTube GitHub Action Tutorial
+# Tutorial Cara Setup Github Action
+
+## Apa itu CI/CD
+Tonton tuturialnya disini: 
