@@ -1,6 +1,6 @@
 # Tutorial Cara Setup Github Action
 
-## CI/CD GitHub Action Setup: Continuous Deployment - SSH RSYNC & FTP
+## GitHub Action CI/CD Setup: Continuous Deployment - SSH RSYNC & FTP
 Tonton tutorialnya disini: 
 
 ## Apa Itu CI/CD, Dan Praktek Dengan GitHub Action
