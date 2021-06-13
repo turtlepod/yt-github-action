@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [ main ]
+    branches: [ ftp ]
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -11,11 +11,11 @@ jobs:
       uses: actions/checkout@v2.3.2
 
     - name: 📂 Sync files
-      uses: burnett01/rsync-deployments@4.1
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        switches: -avzr --delete --exclude=".git" --exclude=".github"
-        path: /
-        remote_path: ${{ secrets.DEPLOY_PATH }}
-        remote_host: ${{ secrets.DEPLOY_HOST }}
-        remote_user: ${{ secrets.DEPLOY_USER }}
-        remote_key: ${{ secrets.DEPLOY_KEY }}
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASS }}
+        protocol: ftps
+        port: ${{ secrets.FTP_PORT }}
+        exclude: .git*
